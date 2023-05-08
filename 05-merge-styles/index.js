@@ -4,12 +4,6 @@ const path = require('path');
 const filePath = path.join(__dirname, "styles\\");
 const newFilePath = path.join(__dirname, "project-dist\\", "bundle.css");
 
-/** перезапись файла при каждом запуске скрипта */
-const clearFile = fs.createWriteStream(newFilePath, { flags: "w" });
-clearFile.write('');
-clearFile.end()
-/** - */
-
 const clearStyles = async function (pathFolder) {
   const clearFile = fs.createWriteStream(pathFolder, { flags: "w" });
   clearFile.write('');
